@@ -4,7 +4,11 @@ from time import sleep
 pump = 37
 
 GPIO.setwarnings(False)
-GPIO.setup(pump,GPIO.OUT)
+
+
+GPIO.setmode(GPIO.BOARD)
+
+GPIO.setup(pump, GPIO.OUT, initial=GPIO.LOW)
 
 print("START")
 print("\n")    
